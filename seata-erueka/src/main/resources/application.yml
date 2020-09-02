@@ -1,0 +1,17 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: erueka
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka
+      #不去注册中心获取其他服务的地址
+    fetch-registry: false
+    #自己不注册自己
+    register-with-eureka: false
+  instance:
+    prefer-ip-address: true
